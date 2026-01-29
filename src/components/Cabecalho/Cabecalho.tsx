@@ -17,7 +17,9 @@ export default function Cabecalho() {
         <>
             <header className="px-6 py-4 bg-fundo-secundario">
                 <div className="flex items-center">
+
                     <div className="flex-[1.9]" />
+
                     <div className="relative w-full max-w-56">
 
                         <input
@@ -25,7 +27,8 @@ export default function Cabecalho() {
                             value={pesquisa}
                             onChange={handlePesquisaChange}
                             placeholder="Pesquisa..."
-                            className="w-full p-2 pl-5 pr-12 border border-borda rounded-full focus:outline-none focus:ring-1 focus:ring-acoes-primaria text-xs"
+                            className="w-full p-2 pl-5 pr-12 border border-borda rounded-full focus:outline-none 
+                            focus:ring-1 focus:ring-acoes-primaria text-xs font-[--fonte-texto-geral]"
                         />
                     
                         <CiSearch

@@ -4,6 +4,7 @@ import PostCard from "@/components/PostCard/PostCard";
 import { postsMock } from "../mocks/posts.mock";
 import { usersMock } from "../mocks/users.mock";
 import { useState } from "react";
+import Botao from "@/components/Botao/Botao";
 export default function Home() {
 
    const [paginaAtual, setPaginaAtual] = useState(1);
@@ -31,23 +32,20 @@ export default function Home() {
                   titulo={post.title}
                   conteudo={post.body}
                   autor={user ? user.name : "Autor Desconhecido"}
+                  userId={post.userId}
                />
             )
          })}
          </div>
          <div className=" flex justify-center items-center gap-6 mt-8">
-         <button onClick={() => setPaginaAtual(paginaAtual - 1)}
-            className="bg-acoes-primaria rounded-full p-2 text-white 
-            cursor-pointer hover:transform hover:scale-95"
-            disabled={paginaAtual === 1}
-            >Anterior</button>
-         <span className="text-texto-principal text-center">Página {paginaAtual} de {totalPaginas}</span>
+            <Botao texto="Anterior" onClick={() => setPaginaAtual(paginaAtual - 1)} disabled={paginaAtual === 1} />
+            <span className="text-texto-principal text-center">
+               Página 
+               <span className="text-acoes-secundaria">{paginaAtual}</span> de {totalPaginas}
+               </span>
 
-         <button onClick={() => setPaginaAtual(paginaAtual + 1)}
-            className="bg-acoes-primaria rounded-full p-2 text-white 
-            cursor-pointer hover:transform hover:scale-95"
-            disabled={paginaAtual === totalPaginas}
-            >Próxima</button>
+            <Botao texto="Próxima" onClick={() => setPaginaAtual(paginaAtual + 1)} 
+            disabled={paginaAtual === totalPaginas} />
          </div>
       </main>
      </div>

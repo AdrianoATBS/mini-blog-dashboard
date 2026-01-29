@@ -16,8 +16,8 @@
   --color-hover: #4F46E5;;
   --color-acoes-secundaria: #64748B;
 
-  --font-texto-geral: var(--fonte-inter-geral);
-  --font-titulo: var(--fonte-dm-sans-titulo);
+  --font-texto-geral: var(--fonte-texto-geral);
+  --font-titulo: var(--fonte-titulo);
 
 }
 
