@@ -33,6 +33,7 @@ export default function Home() {
                   conteudo={post.body}
                   autor={user ? user.name : "Autor Desconhecido"}
                   userId={post.userId}
+                  postId={post.id}
                />
             )
          })}
