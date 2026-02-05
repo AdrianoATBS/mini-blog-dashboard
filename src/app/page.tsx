@@ -41,8 +41,8 @@ export default function Home() {
          <div className=" flex justify-center items-center gap-6 mt-8">
             <Botao texto="Anterior" onClick={() => setPaginaAtual(paginaAtual - 1)} disabled={paginaAtual === 1} />
             <span className="text-texto-principal text-center">
-               Página 
-               <span className="text-acoes-secundaria">{paginaAtual}</span> de {totalPaginas}
+               Página  
+               <span className="text-acoes-secundaria"> {paginaAtual}</span> de {totalPaginas}
                </span>
 
             <Botao texto="Próxima" onClick={() => setPaginaAtual(paginaAtual + 1)} 
