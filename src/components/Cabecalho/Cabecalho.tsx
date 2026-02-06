@@ -1,6 +1,7 @@
 'use client';
 import { CiSearch } from "react-icons/ci";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Botao from "../Botao/Botao";
 export default function Cabecalho() {
     const [pesquisa, setPesquisa] = useState('');
@@ -11,6 +12,16 @@ export default function Cabecalho() {
 
     const handlePesquisaSubmit = () => {
         console.log('Pesquisar por:', pesquisa);
+    };
+
+    const routerRegister = useRouter();
+    const handleRegistrarClick = () => {
+        routerRegister.push("/register");
+    };
+
+    const routerLogin = useRouter();
+    const handleLoginClick = () => {
+        routerLogin.push("/login");
     };
 
     return (
@@ -37,8 +48,8 @@ export default function Cabecalho() {
                         />
                     </div>
                     <div className="flex flex-1 justify-end gap-3">
-                        <Botao texto="Registrar"/>
-                        <Botao texto="Login"/>
+                        <Botao texto="Registrar" onClick={handleRegistrarClick} />
+                        <Botao texto="Login" onClick={handleLoginClick} />
                     </div>
                    
                 </div>
