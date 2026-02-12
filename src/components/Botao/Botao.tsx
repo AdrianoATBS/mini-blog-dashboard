@@ -1,11 +1,10 @@
-type Type ={
-    type: "button" | "submit"
-}
+type Type = "button" | "submit";
+   
 interface BotaoProps {
     texto: string;
     onClick?: () => void;
     disabled?: boolean;
-    type?: "button" | "submit";
+    type?: Type;
 };
 
 export default function Botao({ texto, onClick, disabled, type = "button" }: BotaoProps) {
