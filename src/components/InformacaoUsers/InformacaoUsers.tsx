@@ -1,22 +1,38 @@
 import { UserPerfil } from "../../types/UserPerfil";
-
+import Link from "next/link";
 export default function InformacaoUsers({ user }: { user: UserPerfil }) {
     return(
-        <>
+        <div className="max-w-3xl mx-auto px-6 py-10 flex flex-col gap-8">
             
-            <h1 className="font-[--fonte-titulo] text-xl font-semibold mb-4 pt-2 text-center text-texto-principal">Perfil do Usuário</h1>
-            <div className="bg-card p-6 rounded-lg border border-borda">
-                <h2 className="text-titulo font-bold text-2xl 
-                font-[--fonte-titulo]">{user.name}</h2>
-                <p className="text-texto-principal font-[--fonte-texto-geral]">Empresa: {user.company.name}</p>
-                <p className="text-texto-principal font-[--fonte-texto-geral]">Site:
-                    <span className="text-acoes-primaria  hover:underline hover:decoration-acoes-primaria "> {user.website}</span></p>
-                
-                <h2 className="text-texto-principal font-[--fonte-texto-geral]">Contatos: </h2>
-                <p className="text-texto-secundario font-[--fonte-texto-geral]">Email: {user.email}</p>
-                <p className="text-texto-secundario font-[--fonte-texto-geral]">Telefone: {user.phone}</p>
+            <h1 className="titulo-principal text-center">Perfil do Usuário</h1>
+
+            <div className="bg-card border border-borda rounded-2xl p-8 shadow-sm flex flex-col gap-8">
+                <div className="flex flex-col gap-1">
+                    <h2 className="titulo-secao text-titulo">{user.name}</h2>
+                    <p className="texto-suave">Empresa: {user.company.name}</p>
+                    
+                    <div className="border-t border-borda"/>
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                        <div className="flex flex-col gap-1">
+                            <span className="texto-suave">Email</span>
+                            <span className="texto-base">{user.email}</span>
+                        </div>
+
+                        <div className="flex flex-col gap-1">
+                            <span className="texto-suave">Telefone</span>
+                            <span className="texto-base">{user.phone}</span>
+                        </div>
+
+                        <div className="flex flex-col gap-1 md:col-span-2">
+                            <span className="texto-suave">Website</span>
+                                    <a href={`https://${user.website}`} target="_blank" rel="noopener noreferrer"
+                                     className="text-acoes-primaria hover:underline">{user.website}</a>
+                                </div>
+                    </div>
+                </div>
             </div>
 
-        </>
+        </div>
     )
 }
