@@ -6,14 +6,30 @@ import PostCardUsuario from "../PostCardUsuario/PostCardUsuario";
 export default function ListaPostUsuario({ posts, user }: { posts: Post[], user: User }) {
     return(
         <> 
-            <h2 className="text-xl font-semibold mb-4 pt-2 text-center font-[--fonte-titulo]">Posts do Usuário: <span className="text-texto-principal">{user.name}</span></h2>
-            <div className="grid grid-cols-3 max-w-full w-full pt-8 pl-9 gap-4">
-             {posts.map(post => (
-                    <div key={post.id} className="text-texto-secundario font-[--fonte-texto-geral] ">
-                        <PostCardUsuario posts={post} autor={user.name} />
-                    </div>
-                ))}
-            </div> 
+        <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col gap-10">
+
+            <div className="flex flex-col gap-2 text-center">
+                <h2 className="titulo-seca">
+                    Posts de
+                    <span className="text-acoes-primaria">{user.name}</span>
+                </h2>
+                <p className="texto-suave">
+                    Confira todos os artigos publicados por este usuário.                
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {posts.map((post) => (
+                        <PostCardUsuario
+                            key={post.id}
+                            posts={post}
+                            autor={user.name}
+                        />
+                    ))}
+                </div>
+
+            </div>
+
+        </div>
         </>
         
     )
