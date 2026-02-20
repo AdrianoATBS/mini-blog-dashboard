@@ -9,13 +9,13 @@ export default async function Home() {
 
   return (
      < >
-      <div className="bg-fundo min-h-screen">
-        <Cabecalho />
-        
-         <div className="max-w-7xl mx-auto px-4">
-         <HomeClient posts={posts} users={users} />
-         </div>
-      </div>
+      <div className="bg-fundo min-h-screen flex flex-col">
+
+      <Cabecalho />
+
+      <HomeClient posts={posts} users={users} />
+
+    </div>
       
 
  

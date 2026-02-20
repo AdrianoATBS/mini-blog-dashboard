@@ -7,12 +7,9 @@ export default function Cabecalho() {
 
     const userRouter = useRouter();
 
-
-
-
     return (
         <>
-            <header className="w-full bg-card border border-borda">
+            <header className="w-full bg-card border-b border-borda sticky top-0 z-50">
                 <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
 
                     <div className="flex items-center gap-8">

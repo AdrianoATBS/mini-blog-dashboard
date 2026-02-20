@@ -17,7 +17,13 @@ export default async function UserPage({params}: {params:Promise<{id: string}>})
 
 
 
-    if (!user) return <h1>Usuário não encontrado</h1>
+    if (!user) {
+        return (
+        <div className="min-h-screen flex items-center justify-center">
+            <h1 className="titulo-secao">Usuário não encontrado</h1>
+        </div>
+        );
+    }
 
     return(
         <>
@@ -26,9 +32,9 @@ export default async function UserPage({params}: {params:Promise<{id: string}>})
             
             </div>
 
-            <div >
-                <ListaPostUsuario posts={postsDoUsuario} user={user} />
-            </div>
+           
+            <ListaPostUsuario posts={postsDoUsuario} user={user} />
+            
         </>
     )
 }

@@ -19,7 +19,7 @@ export default function HomeClient({posts, users}: {posts: Post[], users: User[]
   return (
      <div >
 
-      <main className="max-w-6xl mx-auto px-6 py-10 flex flex-col gap-5">
+      <main className="max-w-6xl mx-auto px-6 py-12 flex flex-col gap-10">
 
          <div className="flex flex-col gap-2">
             <h2 className="titulo-principal">
