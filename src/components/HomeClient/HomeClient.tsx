@@ -19,8 +19,18 @@ export default function HomeClient({posts, users}: {posts: Post[], users: User[]
   return (
      <div >
 
-      <main className="p-6 ">
-        <div className="pt-6 grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+      <main className="max-w-6xl mx-auto px-6 py-10 flex flex-col gap-5">
+
+         <div className="flex flex-col gap-2">
+            <h2 className="titulo-principal">
+               Últimos Posts
+            </h2>
+            <p className="texto-suave">
+               Explore os artigos mais recentes publicados na plataforma.
+            </p>
+         </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {postsAtuais.map((post) =>
          {
             const user = users.find((user) => user.id === post.userId);
@@ -36,11 +46,13 @@ export default function HomeClient({posts, users}: {posts: Post[], users: User[]
             )
          })}
          </div>
-         <div className=" flex justify-center items-center gap-6 mt-8">
+
+         <div className=" flex justify-center items-center gap-6 mt-6">
+
             <Botao texto="Anterior" onClick={() => setPaginaAtual(paginaAtual - 1)} disabled={paginaAtual === 1} />
-            <span className="text-texto-principal text-center">
+            <span className="texto-base">
                Página  
-               <span className="text-acoes-secundaria"> {paginaAtual}</span> de {totalPaginas}
+               <span className="font-semibold text-acoes-primaria"> {paginaAtual}</span> de {totalPaginas}
                </span>
 
             <Botao texto="Próxima" onClick={() => setPaginaAtual(paginaAtual + 1)} 
