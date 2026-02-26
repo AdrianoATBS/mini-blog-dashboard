@@ -61,7 +61,6 @@ A aplicação simula um mini portal de conteúdo, permitindo:
 ## ⚙ Funcionalidades
 
 - 📄 Listagem de posts
-- 🔍 Busca por título ou conteúdo
 - 📑 Paginação
 - 📌 Página de detalhe do post
 - 💬 Comentários relacionados ao post
