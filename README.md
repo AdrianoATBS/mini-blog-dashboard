@@ -16,6 +16,11 @@ A aplicação simula um mini portal de conteúdo, permitindo:
 - Paginação de posts
 - Busca por conteúdo via query string
 
+## 📷 Preview
+
+![Preview do MiniBlog](./public/FotoMiniBlog.png)
+
+
 ---
 
 ## 🛠 Tecnologias Utilizadas
@@ -105,5 +110,14 @@ npm run dev
 
 - Melhorar o uso de TypeScript em aplicações reais
 
-## 🚧 Melhorias Futuras
-- Melhorias de UI/UX
+
+
+## ✅ Melhorias Implementadas 
+- Melhorias de UI/UX ✅
+
+## Portfólio
+
+No meu portfólio você encontrará um vídeo demonstrativo desta aplicação, além de outros projetos desenvolvidos por mim.
+
+
+Portfólio: https://adriano-atbs.vercel.app/
